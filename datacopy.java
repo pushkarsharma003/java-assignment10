@@ -4,11 +4,11 @@ class datacopy
 {
 	public static void main(String[] args) throws IOException 
 	{
-		BufferedWriter bw=new BufferedWriter(new FileWriter("file1"));
+		BufferedWriter bw=new BufferedWriter(new FileWriter("file1.txt"));
 		bw.write ("this is a file and my name is pushkar");
 		bw.close();
-		InputStream in=new FileInputStream(new File("file1"));
-		OutputStream out=new FileOutputStream(new File("file 2"));
+		InputStream in=new FileInputStream(new File("file1.txt"));
+		OutputStream out=new FileOutputStream(new File("file 2.txt"));
 		byte[] buf=new byte[1024];
 		int len;
 		while((len=in.read(buf))>0)
